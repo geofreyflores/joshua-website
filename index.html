@@ -5,6 +5,7 @@
 <head>
 	<title>Joshua's website 😀</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -16,16 +17,69 @@
 		<p>Who am I?: I'm a beginner programmer and a grade 4 student. 🏫</p>
 		<p>What do I do?: I go indoor biking on the weekends. 🚲</p>
 		<p>My Favourite things are: Clash of clans, biking, and my family. 👨‍👩‍👦‍👦</p>
+		<div id="loop-section"></div>
+
 		<button id= 'mainbutton' type='button' onclick = sayHello()>say hi!</button>
+		<button id= 'mainbutton' type='button' onclick= hike()>go hiking!</button>
 	</div>
 </body>
 <script>
 	 function sayHello() {
-		let name = prompt("hi what is your name?");
-		if (name !== null  );
-		window.alert ("It 's nice to meet you " + name + " ! Thanks for checking out my website :)")
+		const name = prompt("hi what is your name?");
+		if (name !== null) {
+			window.alert("It 's nice to meet you " + name + " ! Thanks for checking out my website :)");
+
+		}
+	}
+
+function hike()  {
+	document.getElementById("loop-section").innerHTML = "";
+	$('#loop-section').append('<hr class="dotted"></hr>');
+
+	const locations = [
+		'Big Pines ' ,
+		'Betty Sutherland' ,
+		'Old Railway ' ,
+		'Don Mills ' ,
+		'Granite Ridge' ,
+		'Cranberry Bog ',
+		'Chikanikshing'
+	];
+
+	const items = [ ' lots of frogs' , 'nice views' , 'a lot of trees' , 'lakes' ,  'rivers' , 'rocks' , ' lots of rocks' , 'A MOUNTAIN OF ROCKS !!!'];
+
+	const chosenlocation = locations[Math.floor(Math.random()*locations.length)];
+	// <p>I went hiking earlier on the "+chosenlocation+" trail while walking
+	$('#loop-section').append(`<p>I went hiking earlier on the ${chosenlocation} trail and found :</p>`);
+	console.log(`Random location: ${chosenlocation}`);
+
+	for (let index = 0; index < 3 ; index++) {
+		const chosenitem = items[ Math.floor(Math.random()*items.length)];
+		if (index===2) {
+			$('#loop-section').append(`<p>and ${chosenitem}</p>`);
+		} else {
+			$('#loop-section').append(`<p> ${chosenitem},</p>`);
+		}
+
+
+		// $('#loop-section').append(`<p> ${chosenitem},</p>`)
 		
 	}
+}
+
+	// const firstarray = [1,2,3,4,5];
+	// const secondarray =[ "you" , "are" , "a" , "skibidi" , "toilet!"];
+
+	// const x = 5;
+	// const y = 10;
+	// const z = 15;
+
+	// const thirdarray = [x,y,z];
+	// const fourtharray =[1, "you" , x];
+
+	// const skibidiPos = 3;
+	// window.alert(`This is my array content ${thirdarray[2]}`);
+
 
 </script>
 </html>
