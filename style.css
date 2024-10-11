@@ -1,0 +1,72 @@
+p {
+    color: rgb(211, 20, 58);
+}
+
+body {
+    background-color: cadetblue;
+}
+
+#topbar {
+    min-height:300px ;
+    width:100%;
+    background-color: antiquewhite;
+}
+#topbar h1 {
+    font-size: 6vmin;
+    display: inline-block;
+    margin-top: 6% ;
+    margin-left: 10% ;
+    color: crimson;
+}
+#mainsection {
+    height: 60%;
+    width: 90% ;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    margin-left: 5% ;
+    margin-top: 1%;
+} 
+p { 
+    font-size: 4vmin;
+    display: block;
+    margin-left: 3%;
+    margin-right:3%;
+}
+
+/*
+ thou mayest:) 
+*/
+#joshua { 
+    transform: rotate(0deg); // this property spins me around :)
+}
+#mainbutton{
+    margin-left: 5%;
+    margin-bottom: 2%;
+    background-color: #4caf50;
+    color: antiquewhite;
+    padding: 15px 20px;
+    display: inline-block;
+    font-size: 24px;
+    font-family: fantasy;
+    
+}
+
+hr.dotted {
+    border-top: 3px dotted rgb(152, 207, 22);
+}
+#button2{
+    margin-left: 5%;
+    margin-bottom: 2%;
+    background-color: #4caf50;
+    color: antiquewhite;
+    padding: 15px 20px;
+    display: inline-block;
+        font-size: 24px}
+        #button3{
+            margin-left: 5%;
+            margin-bottom: 2%;
+            background-color: #4caf50;
+            color: antiquewhite;
+            padding: 15px 20px;
+            display: inline-block;
+            font-size: 24px;
